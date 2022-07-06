@@ -6,11 +6,13 @@ import Login from "../views/Login";
 //导入子模块
 import UserList from "../views/user/List";
 import UserProfile from "../views/user/Profile";
+import NotFound from "../views/NotFound";
 
 //使用
 Vue.use(VueRouter);
 //导出
 export default new VueRouter({
+  mode: 'history',
   routes: [
     {
       //首页
@@ -40,6 +42,10 @@ export default new VueRouter({
     {
       path: '/goHome',
       redirect: '/main'
+    },
+    {
+      path: '*',
+      component: NotFound
     }
   ]
 })
