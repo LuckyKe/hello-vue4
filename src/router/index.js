@@ -14,8 +14,9 @@ export default new VueRouter({
   routes: [
     {
       //首页
-      path: '/main',
+      path: '/main/:name',
       component: Main,
+      props: true,
       //写入子模块
       children: [
         //:id
