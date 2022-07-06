@@ -7,12 +7,15 @@
             <template slot="title"><i class="el-icon-caret-right"></i>用户管理</template>
             <el-menu-item-group>
               <el-menu-item index="1-1">
-                <!--插入的地方-->
-                <router-link to="/user/profile">个人信息</router-link>
+                <!--name:组件名 params传递参数，需要对象；v-bind绑定对象-->
+                <router-link :to="{name: 'UserProfile', params: {id: 1}}">个人信息</router-link>
               </el-menu-item>
               <el-menu-item index="1-2">
                 <!--插入的地方-->
                 <router-link to="/user/list">用户列表</router-link>
+              </el-menu-item>
+              <el-menu-item index="1-3">
+                <router-link to="/goHome">回到首页</router-link>
               </el-menu-item>
             </el-menu-item-group>
           </el-submenu>

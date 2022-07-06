@@ -18,9 +18,12 @@ export default new VueRouter({
       component: Main,
       //写入子模块
       children: [
+        //:id
         {
-          path: '/user/profile',
-          component: UserProfile
+          path: '/user/profile/:id',
+          name: 'UserProfile',
+          component: UserProfile,
+          props: true
         },
         {
           path: '/user/list',
@@ -32,6 +35,10 @@ export default new VueRouter({
       //登录页
       path: '/login',
       component: Login
+    },
+    {
+      path: '/goHome',
+      redirect: '/main'
     }
   ]
 })
